@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+html {
+    background-color: Black;
+}
+@media print {
+    html {
+        background-color: white;
+    }
+}
+
+body {
+    width: 210mm;
+    /* height: 297mm; */
+}
+@media print {
+    body {
+        width: 100%;
+    }
+}
+
+header li {
+    background-color: Green;
+    box-shadow: 0 0 0 0 White;
+}
+@media print {
+    header li {
+        background-color: white;
+        box-shadow: 0 0 0 0 White;
+        padding: 0px;
+    }
+    header li:after {
+        content: "  >  ";
+    }
+    header li:last-of-type:after {
+        display: none;
+    }
+}
+
+aside, footer {
+    display: none;
+}
+
+#main {
+    width: 100%;
+}
+
+#main section {
+    margin-right: 0px;
+    padding-top: 20mm;
+    padding-bottom: 20mm;
+    padding-left: 20mm;
+    padding-right: 20mm;
+    background-color: #F8ECC2;
+    box-shadow: 0 0 0 0 White;
+	border-radius: 0px;
+    
+    line-height: 2em;
+    /* text-align: left; -- manuscript alignment */
+    text-align: justify;
+    /* font-size: 12pt; -- manuscript font */
+    font-size: 13pt;
+    /* font-family: "Courier New", Courier, monospace; -- manuscript font */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+@media print {
+    #main section {
+        padding-top: 0mm;
+        padding-bottom: 0mm;
+        padding-left: 0mm;
+        padding-right: 0mm;
+        background-color: white;
+    }
+}
+
+#main section section {
+    margin-top: 0px;
+    margin-bottom: 18pt;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 0px;
+    padding: 0px;
+}
+#main section section:after {
+    display: block;
+    content: "* * *";
+    margin-top: 22pt;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 0px;
+    padding: 0px;
+    background-color: transparent;
+    /* font-size: 12pt; -- manuscript font */
+    font-size: 13pt;
+    line-height: 6pt;
+    font-weight: bold;
+    text-align: center;
+}
+#main section section:last-of-type:after {
+    display: none;
+}
+
+#main section section p {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    text-indent: 8mm;
+}
+#main section section p:last-of-type {
+    margin-bottom: 0px;
+}
+
+h2 {
+    /* font-size: 12pt; -- manuscript font */
+    font-size: 13pt;
+    text-transform: uppercase;
+    margin-top: 20mm;
+    margin-bottom: 10mm;
+    text-align: center;
+}
+@media print {
+    h2 {
+        page-break-before: always;
+    }
+}
